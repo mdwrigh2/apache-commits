@@ -1,6 +1,6 @@
 Apache Commits By Company
 
-This project was just a small free time project to get a visualization of what companies actually are committing to the Apache HTTP Web Server project.
+This project was just a small free time project to get a visualization of which companies actually are committing to the Apache HTTP Web Server project.
 
 The apache_commits.xml file is an xml dump of the SVN logs of the project, but since SVN doesn't provide e-mail addresses for authors, I had to cross-reference usernames with another list. I couldn't find an actual list of committers and e-mails, but the Apache project's page contained a list of typical committers, so I grabbed the relevant section and put it in authors.html.
 
