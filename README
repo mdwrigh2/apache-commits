@@ -1,0 +1,11 @@
+Apache Commits By Company
+
+This project was just a small free time project to get a visualization of what companies actually are committing to the Apache HTTP Web Server project.
+
+The apache_commits.xml file is an xml dump of the SVN logs of the project, but since SVN doesn't provide e-mail addresses for authors, I had to cross-reference usernames with another list. I couldn't find an actual list of committers and e-mails, but the Apache project's page contained a list of typical committers, so I grabbed the relevant section and put it in authors.html.
+
+Most of the code in this project is related to stripping the html information, and then cross-referencing the two lists to get a list of commits by company. If I had to do this project again, I'd probably take out the finding and stripping of HTML by regex and use Nokogiri to parse it properly and take the parts I need.
+
+In order to run the code you'll need Nokogiri, Gruff, and their dependencies. Once you have those installed, its you just need to execute apache-commits.rb via the ruby interpreter to generate the output. If you want to see a specific company, or companies, edit the COMPANIES array at the top and then change the parameters passed to the crossReference function in the read function. This will generate (case-insensitive) regexs for the given strings and return a graph with those companies, other companies, and commits it was unable to cross reference (unaccounted commits).
+
+Feel free to contact me with questions, comments, or suggestions regarding this code.
